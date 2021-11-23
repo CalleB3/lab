@@ -24,7 +24,9 @@ module "VM-RDP" {
     location                  = var.location
     depends_on                = [azurerm_resource_group.dev]
     virtual_machine_name      = "MyVMIsCool"
-    virtual_machine_size      = "Standard_B1s"
+    virtual_machine_sku       = "Standard_B2s"
     virtual_network_name      = "ThisIsMyNetwork"
     virtual_network_interface = "ThisIsTheInterface"
+    virtual_machine_instances = "2"
 }
+

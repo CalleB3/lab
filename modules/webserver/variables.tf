@@ -8,7 +8,7 @@ variable "virtual_machine_name" {
     type = string
 }
 
-variable "virtual_machine_size" {
+variable "virtual_machine_sku" {
     type = string
 }
 variable "virtual_network_name" {
@@ -16,4 +16,8 @@ variable "virtual_network_name" {
 }
 variable "virtual_network_interface" {
     type = string
+}
+
+variable "virtual_machine_instances" {
+    type = number
 }
