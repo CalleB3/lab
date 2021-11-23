@@ -26,5 +26,5 @@ module "VM-RDP" {
     virtual_machine_name      = "MyVMIsCool"
     virtual_machine_size      = "Standard_B1s"
     virtual_network_name      = "ThisIsMyNetwork"
-    virtual_network_interface = "hej"
+    virtual_network_interface = "ThisIsTheInterface"
 }
