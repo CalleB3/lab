@@ -10,5 +10,5 @@ spec:
       image: acrcalle.azurecr.io/samples/nginx
       ports:
         - name: web
-          containerPort: 80
+          containerPort: 8080
           protocol: TCP
