@@ -18,7 +18,7 @@ resource "azurerm_resource_group" "dev" {
   location = var.location
 }
 
-module "VM-RDP" {
+/*module "VM-RDP" {
     source = "../modules/webserver"
     resource_group            = var.resource_group
     location                  = var.location
@@ -28,5 +28,14 @@ module "VM-RDP" {
     virtual_network_name      = "ThisIsMyNetwork"
     virtual_network_interface = "ThisIsTheInterface"
     virtual_machine_instances = "2"
+}*/
+module "AKS" {
+    depends_on      = [azurerm_resource_group.dev]
+    source          = "../modules/k8s"
+    resource_group  = var.resource_group
+    location        = var.location
+    cluster_name    = "akscluster1"
+    acr_name        = "ACRcalle"
 }
+
 
