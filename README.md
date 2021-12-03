@@ -1,7 +1,4 @@
-# lab
-
-## Readme
-
+# Readme
 ### AKS
 
 - Creates a cluster in Azure Kubernetes Service on VMSS
